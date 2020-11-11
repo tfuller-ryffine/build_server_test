@@ -1,6 +1,7 @@
 pipeline {
     // agent any
-    agent { docker { image 'python:3.8.6' } }
+    agent { dockerfile true }
+    // agent { docker { image 'python:3.8.6' } }
     // environment {
     //     AWS_ACCESS_KEY_ID     = credentials('AKIAQ22XKPXHJZ7RPE6B')
     //     AWS_SECRET_ACCESS_KEY = credentials('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')
@@ -9,14 +10,13 @@ pipeline {
         stage('build') {
             steps {
                 sh 'python --version'
-                // sh 'ls -al'
+                sh 'ls -al'
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
                 // sh('./test.sh')
-                sh('apt-get update && apt-get upgrade -y')
                 // sh('pip install --no-cache-dir behave')
             }
         }
