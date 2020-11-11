@@ -15,8 +15,8 @@ pipeline {
             steps {
                 echo 'Testing..'
                 // sh('./test.sh')
-                sh('pip3 install --user -y unittest')
-                sh('pip3 install --user -y behave')
+                sh('pip3 install --user unittest -y')
+                sh('pip3 install --user behave -y')
             }
         }
         stage('Deploy') {
