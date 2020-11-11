@@ -15,8 +15,9 @@ pipeline {
             steps {
                 echo 'Testing..'
                 // sh('./test.sh')
-                sh('sudo pip3 install unittest')
-                sh('sudo pip3 install behave')
+                sh('apt-get update && apt-get upgrade -y')
+                // sh('sudo pip3 install unittest')
+                // sh('sudo pip3 install behave')
             }
         }
         stage('Deploy') {
