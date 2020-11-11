@@ -1,0 +1,231 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2512
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset0 Monaco;\f2\fswiss\fcharset0 Helvetica-Bold;
+\f3\fswiss\fcharset0 Helvetica;\f4\fnil\fcharset0 HelveticaNeue;\f5\fswiss\fcharset0 ArialMT;
+\f6\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red245\green245\blue245;\red247\green86\blue21;
+\red117\green66\blue151;\red52\green52\blue52;\red255\green255\blue255;\red199\green200\blue201;\red20\green22\blue25;
+\red27\green29\blue31;\red250\green240\blue202;\red235\green236\blue237;\red194\green126\blue101;\red23\green23\blue23;
+\red202\green202\blue202;\red36\green38\blue41;\red37\green127\blue159;\red212\green214\blue154;\red26\green28\blue31;
+\red38\green38\blue38;\red0\green0\blue0;\red35\green35\blue35;\red245\green249\blue250;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c96863\c96863\c96863;\cssrgb\c98431\c42745\c9804;
+\cssrgb\c53725\c34902\c65882;\cssrgb\c26667\c26667\c26667;\cssrgb\c100000\c100000\c100000;\cssrgb\c81961\c82353\c82745;\cssrgb\c10196\c11373\c12941;
+\cssrgb\c14118\c15294\c16078;\cssrgb\c98431\c94902\c83137;\cssrgb\c93725\c94118\c94510;\cssrgb\c80784\c56863\c47059;\cssrgb\c11765\c11765\c11765;
+\cssrgb\c83137\c83137\c83137;\cssrgb\c18824\c20000\c21176;\cssrgb\c16863\c56863\c68627;\cssrgb\c86275\c86275\c66667;\cssrgb\c13333\c14510\c16078;
+\cssrgb\c19608\c19608\c19608;\cssrgb\c0\c0\c0\c4706;\cssrgb\c18039\c18039\c18039;\cssrgb\c96863\c98039\c98431;}
+\margl1440\margr1440\vieww12620\viewh12840\viewkind0
+\deftab720
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f0\fs23\fsmilli11560 \cf2 \cb3 \expnd0\expndtw0\kerning0
+puttygen \cf4 RyffineOhioRecover\cf2 .ppk -O \cf5 private\cf2 -openssh -o \cf4 OhioRecover\cf2 .pem
+\f1\fs28 \cf6 \cb7 \
+\pard\pardeftab720\sl380\partightenfactor0
+\cf6 \
+\
+\
+ssh -i "OhioRecover.pem" 
+\f2\b\fs30 \cf8 \cb9 ec2
+\f3\b0 -
+\f2\b user
+\f1\b0\fs28 \cf6 \cb7 @ec2-18-191-193-158.us-east-2.compute.amazonaws.com\
+\
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f0\fs23\fsmilli11560 \cf2 \cb3 puttygen \cf4 phil-content-ryffiner\cf2 .ppk -O \cf5 private\cf2 -openssh -o \cf4 phil-content-ryffiner\cf2 .pem
+\f1\fs28 \cf6 \cb7 \
+\pard\pardeftab720\sl380\partightenfactor0
+
+\f4\fs26 \cf6 \
+\pard\pardeftab720\sl380\partightenfactor0
+
+\f1\fs28 \cf6 sudo ssh -vvv -i "OhioRecover.pem" phil@
+\f4\fs26 <IP/HostName>\
+
+\f1\fs28 sudo ssh -vvv -i "OhioRecover.pem" ubuntu@
+\f4\fs26 <IP/HostName>\
+\
+\
+
+\f1\fs28 *sudo ssh -vvv -i "phil-content-ryffiner.pem" phil@
+\f4\fs26 3.16.67.131\
+
+\f1\fs28 sudo ssh -vvv -i "phil-content-ryffiner.pem" phil@
+\f4\fs26 18.216.186.177\
+
+\f1\fs28 *sudo ssh -vvv -i "phil-content-ryffiner.pem" ubuntu@
+\f4\fs26 3.16.67.131
+\f1\fs28 \
+\
+\
+sudo ssh -vvv -i "ContentFusionEnterprise.pem" ubuntu@
+\f4\fs26 35.183.110.1
+\f1\fs28 \
+\
+ContentFusionEnterprise\
+\pard\pardeftab720\partightenfactor0
+
+\f4\fs26 \cf6 ContentRyffinerMVP
+\f1\fs28 \cf6 \
+\pard\pardeftab720\sl380\partightenfactor0
+\cf6 \
+\
+*ssh -vvv -i "TestKey.pem" ubuntu@
+\f4\fs26 18.222.128.161\
+\
+
+\f1\fs28 ssh -vvv -i "TestKey.pem" ubuntu@
+\f4\fs26 ec2-18-221-88-90.us-east-2.compute.amazonaws.com\
+\
+\
+\
+\
+\
+\
+
+\f1\fs28 ssh -vvv -i "TestKey.pem" ubuntu@
+\f4\fs26 ec2-3-15-18-193.us-east-2.compute.amazonaws.com\
+\
+
+\f1\fs28 \
+openssl pkcs8 -in TestKey.pem -inform PEM -outform DER -topk8 -nocrypt | openssl sha1 -c\
+\
+openssl pkcs8 -in OhioRecover.pem -inform PEM -outform DER -topk8 -nocrypt | openssl sha1 -c\
+\
+\
+ssh -vvv -i "TestKey.pem" ubuntu@
+\f4\fs26 18.223.166.10\
+
+\f1\fs28 ssh -vvv -i "TestKey.pem" ubuntu@
+\f4\fs26 ec2-18-223-166-10.us-east-2.compute.amazonaws.com\
+
+\f1\fs28 \
+
+\f4\fs26 \
+\
+
+\f1\fs28 ssh -I "OhioRecover.pem" ubuntu@
+\f4\fs26 18.217.98.218
+\f1\fs28 \
+\pard\pardeftab720\sl300\partightenfactor0
+
+\f4\fs26 \cf6 \
+\
+\
+\pard\pardeftab720\sl380\partightenfactor0
+
+\f1\fs28 \cf6 ssh \'97vvv -I \'93
+\f4\fs26 ContentRyffinerMVP
+\f1\fs28 .pem\'94 
+\f2\b\fs30 \cf8 \cb9 ec2
+\f3\b0 -
+\f2\b user
+\f1\b0\fs28 \cf6 \cb7 @
+\f4\fs26 18.191.138.234
+\f1\fs28 \
+\
+\
+\
+\
+$ docker build -t timfullerryffine/my-first-repo .\
+$ docker run timfullerryffine/my-first-repo\
+$ docker push timfullerryffine/my-first-repo\
+\
+\
+\
+docker image build -t contentryffiner:0.5 .\
+\
+docker container run -itd -p 8000:8080
+\f5\fs30 \cf10 \cb11  
+\f0\fs26 \cb12 --privileged=true 
+\f1\fs28 \cf6 \cb7 --name cr contentryffiner:0.5
+\f0\fs26 \cf10 \cb1 \
+
+\f1\fs28 \cf6 \cb7 \
+\
+\
+\
+docker container run --publish 8000:8080 --detach -it 
+\f5\fs30 \cf10 \cb11 --privileged 
+\f1\fs28 \cf6 \cb7 --name cr contentryffiner:0.5 
+\f5\fs30 \cf10 \cb11 /usr/sbin/init\
+\
+\
+\
+docker exec -it cr /bin/bash\
+\
+\
+\
+\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\f0\fs24 \cf13 \cb14 curl -L http://xrl.us/installperlnix | bash\cf15 \cb1 \
+\pard\pardeftab720\sl380\partightenfactor0
+
+\f5\fs30 \cf10 \cb11 \
+\
+cpan inc::latest -y\
+\pard\pardeftab720\sl300\partightenfactor0
+
+\f0\fs26 \cf16 \cb1 cpan \cf17 Module\cf16 ::\cf17 Build -y
+\fs24 \cf15 \
+\pard\pardeftab720\sl380\partightenfactor0
+
+\f5\fs30 \cf10 \cb11 cpan Digest::MD5 -y\
+cpan JSON -y\
+cpan YAML -y\
+cpan 
+\f0\fs24 \cf15 \cb14 Data::Dump -y\cb1 \
+cpan \cb14 Data::Table::Text -y
+\f5\fs30 \cf10 \cb11 \
+\
+\
+\
+\
+\
+fe = getFileNameExtension\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\f0\fs24 \cf13 \cb14 fp = getFilePathName\
+fpd = filePathDir\
+fpe = filePathExt\
+fpf = filePath\
+fpn = removeFileNameExtension\
+fp = getFileNamePath\cf15 \cb1 \
+fne = removeFileNamePath\
+fn = \cf18 \cb14 removeFileNamePathandExtension\cf15 \cb1 \
+owf = overWriteFile\
+\
+\
+\
+\
+\
+\pard\pardeftab720\sl340\partightenfactor0
+
+\f3\fs30 \cf8 \cb19 SF-232,\
+SF-214,\
+SF-81,\
+SF-80,\
+SF-99,\
+SF-107,\
+SF-108\
+\
+\
+\
+
+\f0\fs24 \cf15 \cb1 \
+\pard\pardeftab720\sl360\partightenfactor0
+\cf13 \cb14 q(s3://salesforce.commerce.cloud.dita/originals)\cf15 .&docSet.\cf13 q(/)\cf15 \cb1 \
+\cf13 \cb14 q(s3://3)\cf15 \cb1 \
+\
+\
+\pard\pardeftab720\sl440\partightenfactor0
+
+\f6\fs28 \cf20 \cb21 sudo chown -R phil:phil $HOME\
+\
+\pard\pardeftab720\sl260\partightenfactor0
+
+\fs21\fsmilli10800 \cf22 \cb23 docker run -d -p 5000:5000 timfullerryffine/prototype-py-microservice:latest\
+\pard\pardeftab720\sl440\partightenfactor0
+
+\fs28 \cf20 \cb21 \
+}
