@@ -14,8 +14,9 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                sh('./test.sh')
-                sh('pip3 install --no-cache-dir -r requirements.txt')
+                // sh('./test.sh')
+                sh('pip3 install --user -y unittest')
+                sh('pip3 install --user -y behave')
             }
         }
         stage('Deploy') {
