@@ -18,6 +18,9 @@ pipeline {
                 echo 'Testing..'
                 // sh('./test.sh')
                 sh 'python -m unittest -v'
+                sh 'behave'
+                sh 'coverage run -m unittest discover'
+                sh 'coverage report'
             }
         }
         stage('Deploy') {
