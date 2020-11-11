@@ -17,7 +17,7 @@ pipeline {
             steps {
                 echo 'Testing..'
                 // sh('./test.sh')
-                // sh('pip install --no-cache-dir behave')
+                sh('sudo pip install behave')
             }
         }
         stage('Deploy') {
