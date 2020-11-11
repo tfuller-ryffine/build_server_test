@@ -9,14 +9,15 @@ pipeline {
         stage('build') {
             steps {
                 sh 'python --version'
-                hs 'USER root'
+                sh 'USER root'
+                sh 'ls -al'
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing..'
                 // sh('./test.sh')
-                sh('apt-get update && apt-get upgrade -y')
+                // sh('apt-get update && apt-get upgrade -y')
                 // sh('sudo pip3 install unittest')
                 // sh('sudo pip3 install behave')
             }
