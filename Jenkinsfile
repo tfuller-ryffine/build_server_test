@@ -7,15 +7,32 @@ pipeline {
         AWS_SECRET_ACCESS_KEY = credentials('Gg4W/FE/gT1KhfLEVWvXm+RoE4fQSOOSx/fFcAND')
     }
     stages {
-        stage('Example stage 1') {
+        stage('Build') {
             steps {
-                sh('./test.sh')
+                echo 'Building..'
             }
         }
-        stage('Example stage 2') {
+        stage('Test') {
             steps {
-                // 
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
             }
         }
     }
+    // stages {
+    //     stage('Example stage 1') {
+    //         steps {
+    //             sh('./test.sh')
+    //         }
+    //     }
+    //     stage('Example stage 2') {
+    //         steps {
+    //             // 
+    //         }
+    //     }
+    // }
 }
