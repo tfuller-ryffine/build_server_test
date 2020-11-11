@@ -17,7 +17,6 @@ pipeline {
                 echo 'Testing..'
                 // sh('./test.sh')
                 // sh('apt-get update && apt-get upgrade -y')
-                sh('pip install --no-cache-dir unittest')
                 sh('pip install --no-cache-dir behave')
             }
         }
