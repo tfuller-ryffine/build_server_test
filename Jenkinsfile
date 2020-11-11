@@ -9,6 +9,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'python --version'
+                hs 'USER root'
             }
         }
         stage('Test') {
