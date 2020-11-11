@@ -1,0 +1,43 @@
+import os, sys
+from behave import *
+from hamcrest import *
+import os.path
+
+
+@given(u'the input file contains MIF/XML')
+def step_impl(context):
+    pass
+
+
+@given(u'the input file contains <book> elements')
+def step_impl(context):
+    pass
+
+
+@then(u'convert the books elements to <map>')
+def step_impl(context):
+    pass
+
+
+@then(u'convert the book elements to <map>')
+def step_impl(context):
+    pass
+
+
+@then(u'add <title> element within a book element')
+def step_impl(context):
+    pass
+
+
+@then(u'convert the <chapter> element within a <book> element to a <topicref> element')
+def step_impl(context):
+    pass
+
+@then(u'cut out any <map> elements within a <map> element and put into their own file')
+def step_impl(context):
+    pass
+
+
+@then(u'any <topicref> elements that were within a <book> elements are now within <map> elements')
+def step_impl(context):
+    pass
