@@ -2,4 +2,4 @@
 
 echo "Hello World from Jenkins Build Server!!!"
 
-pip3 install --no-cache-dir -r requirements.txt --user
+pip3 install --user --no-cache-dir -r requirements.txt
