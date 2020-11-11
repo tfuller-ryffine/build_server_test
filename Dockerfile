@@ -1,8 +1,7 @@
 FROM python:3.8.6
 EXPOSE 8080
 
-RUN useradd -ms /bin/bash test_user
-USER test_user
+USER root
 
 RUN echo "content ryffiner backend dockerfile - Test/Dev"
 
