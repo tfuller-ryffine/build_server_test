@@ -17,7 +17,6 @@ pipeline {
             steps {
                 echo 'Testing..'
                 // sh('./test.sh')
-                sh('sudo pip install behave')
             }
         }
         stage('Deploy') {

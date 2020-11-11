@@ -20,3 +20,5 @@ RUN sudo apt install ant -y
 RUN apt-get install vim -y
 
 RUN sudo apt-get -y install gcc g++ make autoconf libc-dev pkg-config
+
+RUN sudo pip install behave
