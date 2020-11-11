@@ -17,8 +17,8 @@ pipeline {
                 echo 'Testing..'
                 // sh('./test.sh')
                 // sh('apt-get update && apt-get upgrade -y')
-                sh('sudo pip install unittest')
-                sh('sudo pip install behave')
+                sh('pip install unittest')
+                sh('pip install behave')
             }
         }
         stage('Deploy') {
