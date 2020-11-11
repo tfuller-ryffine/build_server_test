@@ -8,8 +8,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'python --version'
-                sh 'USER root'
+                // sh 'python --version'
                 sh 'ls -al'
             }
         }
