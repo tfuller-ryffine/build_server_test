@@ -1,4 +1,5 @@
 pipeline {
+    agent any
     // agent {
     //     // Define agent details here
     // }
