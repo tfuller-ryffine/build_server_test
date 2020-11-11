@@ -9,7 +9,7 @@ pipeline {
         stage('build') {
             steps {
                 // sh 'python --version'
-                sh 'ls -al'
+                // sh 'ls -al'
             }
         }
         stage('Test') {
@@ -17,8 +17,8 @@ pipeline {
                 echo 'Testing..'
                 // sh('./test.sh')
                 // sh('apt-get update && apt-get upgrade -y')
-                // sh('sudo pip3 install unittest')
-                // sh('sudo pip3 install behave')
+                sh('sudo pip install unittest')
+                sh('sudo pip install behave')
             }
         }
         stage('Deploy') {
