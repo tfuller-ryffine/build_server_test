@@ -21,10 +21,10 @@ RUN apt-get install vim -y
 
 RUN sudo apt-get -y install gcc g++ make autoconf libc-dev pkg-config
 
-# RUN sudo apt-get -y remove docker docker-engine docker.io
+RUN apt-get -y remove docker docker-engine docker.io
 
-# RUN sudo apt -y install docker.io
+RUN apt -y install docker.io
 
-# RUN sudo systemctl start docker
+RUN systemctl start docker
 
-# RUN sudo systemctl enable docker
+RUN systemctl enable docker
