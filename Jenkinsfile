@@ -1,12 +1,19 @@
 pipeline {
     // agent any
     // agent { dockerfile true }
-    agent { docker { image 'python:3.8.6' } }
+    // agent { docker { image 'python:3.8.6' } }
+    
+    agent {
+        dockerfile {
+            filename 'Dockerfile'
+            dir 'deploy'
+        }
+    }
     stages {
         stage('build') {
             steps {
                 echo 'Build..'
-                sh('./build.sh')
+                // sh('./build.sh')
                 // sh 'python --version'
                 sh 'ls -al'
                 
