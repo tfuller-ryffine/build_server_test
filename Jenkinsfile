@@ -33,8 +33,8 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 sh('./deploy.sh')
-                sh 'ls -al'
-                sh 'docker --version'
+                // sh 'ls -al'
+                // sh 'docker --version'
             }
         }
     }

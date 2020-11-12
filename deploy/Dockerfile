@@ -3,7 +3,7 @@ EXPOSE 8080
 
 USER root
 
-RUN echo "content ryffiner backend dockerfile - Test/Dev"
+RUN echo "Builder server test - dockerfile build and image push"
 
 WORKDIR /usr/src/app
 
@@ -21,4 +21,8 @@ RUN apt-get install vim -y
 
 RUN sudo apt-get -y install gcc g++ make autoconf libc-dev pkg-config
 
-RUN apt-get -y install docker
+COPY . .
+
+RUN chmod 755 /usr/src/app
+
+
