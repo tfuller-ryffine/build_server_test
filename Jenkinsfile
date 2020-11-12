@@ -32,7 +32,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                // sh('./deploy.sh')
+                sh('./deploy.sh')
                 sh 'ls -al'
                 sh 'docker --version'
             }
