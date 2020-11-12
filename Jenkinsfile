@@ -2,10 +2,6 @@ pipeline {
     // agent any
     // agent { dockerfile true }
     agent { docker { image 'python:3.8.6' } }
-    // environment {
-    //     AWS_ACCESS_KEY_ID     = credentials('AKIAQ22XKPXHJZ7RPE6B')
-    //     AWS_SECRET_ACCESS_KEY = credentials('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')
-    // }
     stages {
         stage('build') {
             steps {
