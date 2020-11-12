@@ -34,8 +34,6 @@ pipeline {
                 echo 'Deploying....'
                 // sh('./deploy.sh')
                 sh 'ls -al'
-                sh 'yum install -y docker'
-                sh 'sudo service docker start'
                 sh 'docker --version'
             }
         }
