@@ -1,7 +1,7 @@
 pipeline {
     // agent any
-    agent { dockerfile true }
-    // agent { docker { image 'python:3.8.6' } }
+    // agent { dockerfile true }
+    agent { docker { image 'python:3.8.6' } }
     // environment {
     //     AWS_ACCESS_KEY_ID     = credentials('AKIAQ22XKPXHJZ7RPE6B')
     //     AWS_SECRET_ACCESS_KEY = credentials('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')
@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'python --version'
+                // sh 'python --version'
                 sh 'ls -al'
             }
         }
@@ -17,15 +17,16 @@ pipeline {
             steps {
                 echo 'Testing..'
                 // sh('./test.sh')
-                sh 'python -m unittest -v'
-                sh 'behave'
+                // sh 'python -m unittest -v'
+                // sh 'behave'
                 // sh 'coverage run -m unittest discover'
-                sh 'coverage report'
+                // sh 'coverage report'
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+                sh('./deploy.sh')
             }
         }
     }
