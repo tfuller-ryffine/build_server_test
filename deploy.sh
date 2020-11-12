@@ -11,6 +11,6 @@ wait
 echo ------
 echo push DEPLOY TEST image to dockerhub
 echo ------
-docker login --username=timfullerryffine
+cat ~/docker_pass.txt | docker login --username timfullerryffine --password-stdin
 wait
 docker push timfullerryffine/contentryffinermvp:deploytest
