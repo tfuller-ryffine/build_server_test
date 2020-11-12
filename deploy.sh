@@ -5,7 +5,8 @@ echo build DEPLOY TEST image
 echo ------
 docker --version
 wait
-docker build -f ../deploy/Dockerfile --tag timfullerryffine/contentryffinermvp:deploytest .
+cd deploy
+docker build --tag timfullerryffine/contentryffinermvp:deploytest .
 wait
 echo ------
 echo push DEPLOY TEST image to dockerhub
