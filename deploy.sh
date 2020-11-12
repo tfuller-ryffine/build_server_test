@@ -11,4 +11,6 @@ wait
 echo ------
 echo push DEPLOY TEST image to dockerhub
 echo ------
+docker login -u timfullerryffine
+wait
 docker push timfullerryffine/contentryffinermvp:deploytest
