@@ -1,14 +1,14 @@
 pipeline {
-    // agent any
+    agent any
     // agent { dockerfile true }
     // agent { docker { image 'python:3.8.6' } }
     
-    agent {
-        dockerfile {
-            filename 'Dockerfile'
-            dir 'deploy'
-        }
-    }
+    // agent {
+    //     dockerfile {
+    //         filename 'Dockerfile'
+    //         dir 'deploy'
+    //     }
+    // }
     stages {
         stage('build') {
             steps {
