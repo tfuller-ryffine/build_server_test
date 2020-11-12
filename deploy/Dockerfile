@@ -23,8 +23,4 @@ RUN sudo apt-get -y install gcc g++ make autoconf libc-dev pkg-config
 
 RUN apt-get -y remove docker docker-engine docker.io
 
-RUN apt -y install docker.io
-
-RUN systemctl start docker
-
-RUN systemctl enable docker
+# RUN apt -y install docker.io
