@@ -5,8 +5,11 @@ pipeline {
     stages {
         stage('build') {
             steps {
+                echo 'Build..'
+                sh('./build.sh')
                 // sh 'python --version'
                 sh 'ls -al'
+                
             }
         }
         stage('Test') {
